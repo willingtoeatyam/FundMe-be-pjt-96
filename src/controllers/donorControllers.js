@@ -1,7 +1,8 @@
-const donor = require('../models/donor')
+const donor = require('../models/donor') //importing donor model
 
+//creating a function to register donors
 exports.registerNewDonor = (req, res) => {
-    donor.create({
+    donor.create({ //creating the donor document
         ...req.body
     }, (err, newUser) => {
         if (err) {

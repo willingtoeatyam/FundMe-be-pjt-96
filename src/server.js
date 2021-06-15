@@ -8,11 +8,12 @@ const authRoutes = require('./routes/authRoutes')
 
 const app = express();
 
-//initialise database
+//initialise database connection
 dbSetup();
 
 app.use(express.json());
 
+//adding the created route object to the express path
 app.use('/auth', authRoutes);
 
 app.listen(PORT || 4000, ()=> { console.log('Server is running') });

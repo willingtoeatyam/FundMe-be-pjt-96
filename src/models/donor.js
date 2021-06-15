@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//Creating a Donor Schema
 const donorSchema = new mongoose.Schema({
     firstName: {
         type: String,
@@ -26,6 +27,8 @@ const donorSchema = new mongoose.Schema({
     }
 })
 
+//Creating a Donor Model with the above schema
 const donor = mongoose.model('Donor', donorSchema);
 
+//Exporting the donor model
 module.exports = donor;
