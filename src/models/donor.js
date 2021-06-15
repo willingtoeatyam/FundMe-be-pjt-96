@@ -22,9 +22,11 @@ const donorSchema = new mongoose.Schema({
     },
     category: {
         type: String,
-        default: 'donor',
+        enum: ['individual', 'organisation'],
+        default: 'individual',
         required: true
-    }
+    },
+    organizationName: String
 })
 
 //Creating a Donor Model with the above schema
