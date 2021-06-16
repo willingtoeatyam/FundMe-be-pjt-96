@@ -15,8 +15,12 @@ const donorSchema = new mongoose.Schema({
         required: true,
         unique: [true, 'email already in database']
     },
+    password: {
+        type: String,
+        required: true
+    },
     phone: Number,
-    location: {
+    state: {
         type: String,
         required: true
     },
